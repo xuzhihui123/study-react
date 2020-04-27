@@ -1,11 +1,16 @@
 import React from 'react';
+// import FormPage from "./component/FormPage";
+// import PurComponent from "./component/PurComponent";
+import Memo from "./component/Memo";
 
 
 function App() {
   return (
-    <div className="App">
-        <h3>我是App</h3>
-    </div>
+      <div className="App">
+        {/*<FormPage/>*/}
+        {/*<PurComponent/>*/}
+        <Memo/>
+      </div>
   );
 }
 
