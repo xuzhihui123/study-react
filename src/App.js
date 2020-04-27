@@ -1,10 +1,11 @@
 import React from 'react';
+import FormPage from "./component/FormPage";
 
 
 function App() {
   return (
     <div className="App">
-        <h3>我是App</h3>
+      <FormPage/>
     </div>
   );
 }
