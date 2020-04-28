@@ -1,12 +1,12 @@
 import React from 'react';
-import ReactRedux from "./component/ReactRedux";
+import ReactReduxPage from "./component/ReactReduxPage";
 
 
 function App() {
   return (
-    <div className="App">
-       <ReactRedux/>
-    </div>
+        <div className="App">
+          <ReactReduxPage/>
+        </div>
   );
 }
 
