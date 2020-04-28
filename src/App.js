@@ -1,10 +1,11 @@
 import React from 'react';
+import ReactRedux from "./component/ReactRedux";
 
 
 function App() {
   return (
     <div className="App">
-        <h3>我是App</h3>
+       <ReactRedux/>
     </div>
   );
 }
