@@ -12,13 +12,13 @@ import {connect} from 'react-redux'
 
 class ReactReduxPage extends Component {
   render() {
-    const {counter, add} = this.props
-    console.log(counter);
+    const {counter, add, asyncAdd} = this.props
     return (
         <div>
           <h3>ReactReduxPage</h3>
           <span>counter:{counter.age}</span>
           <button onClick={add}>add</button>
+          <button onClick={asyncAdd}>asyncAdd</button>
         </div>
     );
   }
@@ -29,11 +29,21 @@ class ReactReduxPage extends Component {
 export default connect(
     //mapStateToProps
     state => {
-      return {counter: state}
+      return {counter: state.count1}
     },
     {
+
+      //同步的
       add: () => {
         return {type: 'add'}
+      },
+      //异步的
+      asyncAdd: () => dispatch => {
+        setTimeout(() => {
+          dispatch({
+            type: 'add'
+          })
+        }, 2000)
       }
     }
 )(ReactReduxPage);
